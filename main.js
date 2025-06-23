@@ -50,7 +50,8 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
                     document.documentElement.setAttribute('data-theme', currentTheme);
                     document.getElementById('themeBtn').textContent = currentTheme === 'light' ? '🌙' : '☀️';
                   }
-                  function toggleLanguage() {
+                  function toggleLanguage() 
+                  {
                     currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
                     updateLanguage();
                     saveToStorage();
