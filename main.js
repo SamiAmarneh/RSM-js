@@ -131,3 +131,38 @@ function filterTasks(filter) {
       document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
       document.getElementById(`${currentFilter}Tab`).classList.add('active');
     }
+ function validateInput(text) {
+      if (!text) {
+        alert(getText('taskEmpty'));
+        return false;
+      }
+      if (!isNaN(text[0])) {
+        alert(getText('taskNumber'));
+        return false;
+      }
+      if (text.length < 5) {
+        alert(getText('taskShort'));
+        return false;
+      }
+      if (tasks.some(task => task.text.toLowerCase() === text.toLowerCase())) {
+        alert(getText('taskExists'));
+        return false;
+      }
+      return true;
+    }
+
+    function confirmPopup(callback, message) {
+      actionCallback = callback;
+      document.getElementById('popupMessage').textContent = message;
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function confirmAction() {
+      if (actionCallback) actionCallback();
+      closePopup();
+    }
+
+    function closePopup() {
+      actionCallback = null;
+      document.getElementById('popup').style.display = 'none';
+    }
