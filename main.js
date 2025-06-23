@@ -85,3 +85,4 @@ function getText(key, params = {}) {
   });
   return text;
 }
+
