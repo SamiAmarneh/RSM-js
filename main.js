@@ -86,3 +86,8 @@ function getText(key, params = {}) {
   return text;
 }
 
+function renderTasks() {
+    const list = document.getElementById('taskList');
+    list.innerHTML = '';
+    const filteredTasks = tasks.filter(task => {
+    if (currentFilter === 'done') return task.done;
