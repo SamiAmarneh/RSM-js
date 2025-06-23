@@ -91,3 +91,6 @@ function renderTasks() {
     list.innerHTML = '';
     const filteredTasks = tasks.filter(task => {
     if (currentFilter === 'done') return task.done;
+    if (currentFilter === 'todo') return !task.done;
+  return true;
+});
