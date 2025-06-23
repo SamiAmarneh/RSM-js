@@ -55,3 +55,8 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
                     updateLanguage();
                     saveToStorage();
                   }
+                  function updateLanguage() {
+                    const isArabic = currentLanguage === 'ar';
+                    document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
+                    document.documentElement.setAttribute('lang', currentLanguage);
+                    document.getElementById('langBtn').textContent = isArabic ? 'English' : 'العربية';
