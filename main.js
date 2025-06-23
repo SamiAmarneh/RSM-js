@@ -75,3 +75,6 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
     document.getElementById('renameConfirmBtn').textContent = t.renameBtn;
     document.getElementById('renameCancelBtn').textContent = t.cancelBtn;
     document.getElementById('cancelBtn').textContent = t.cancelBtn;
+    document.getElementById('confirmBtn').textContent = t.confirmBtn;
+    renderTasks();
+}
