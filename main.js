@@ -41,7 +41,8 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
                     if (event.target === renamePopup) closeRenamePopup();
                     }
                   }
-                  function toggleTheme() {
+                  function toggleTheme() 
+                  {
                     currentTheme = currentTheme === 'light' ? 'dark' : 'light';
                     updateTheme();
                     saveToStorage();
