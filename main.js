@@ -63,3 +63,32 @@ function addTask() {
     input.style.background = '';
     }, 500);
     }
+    function toggleTask(index) {
+  tasks[index].done = !tasks[index].done;
+  saveToStorage();
+  renderTasks();
+}
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  saveToStorage();
+  renderTasks();
+}
+    function renameTask(index) {
+      renameIndex = index;
+      document.getElementById('renameInput').value = tasks[index].text;
+      document.getElementById('renamePopup').style.display = 'flex';
+      setTimeout(() => {
+        document.getElementById('renameInput').focus();
+        document.getElementById('renameInput').select();
+      }, 100);
+    }
+
+    function confirmRename() {
+      const newName = document.getElementById('renameInput').value.trim();
+      if (!validateInput(newName)) return;
+
+      tasks[renameIndex].text = newName;
+      saveToStorage();
+      renderTasks();
+      closeRenamePopup();
+    }
