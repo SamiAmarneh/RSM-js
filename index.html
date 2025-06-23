@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo Manager</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+  </style>
+</head>
+<body>
+ 
+    <div class="storage-indicator" id="storageIndicator">✓ تم الحفظ</div>
+
+    <div class="container">
+    <div class="header">
+      <h1 id="mainTitle">Todo List <span class="sub-title" id="subTitle">– TodoInput</span></h1>
+      <div class="controls">
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+        <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">العربية</button>
+      </div>
+    </div>
+
+     <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Enter your task..." />
+      <button onclick="addTask()" id="addBtn">Add new task</button>
+    </div>
+
+     <!-- Tabs -->
+    <div class="tabs">
+      <button id="allTab" class="active" onclick="filterTasks('all')">All</button>
+      <button id="doneTab" onclick="filterTasks('done')">Done</button>
+      <button id="todoTab" onclick="filterTasks('todo')">Todo</button>
+    </div>
+
+    <div class="task-counter" id="taskCounter"></div>
+
+    <ul id="taskList"></ul>
+
+    <div class="buttons">
+      <button class="blue" onclick="deleteDoneTasks()" id="deleteDoneBtn">Delete Done Tasks</button>
+      <button class="red" onclick="deleteAllTasks()" id="deleteAllBtn">Delete All Tasks</button>
+    </div>
+  </div>
+
+   <!-- Delete Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p id="popupMessage"></p>
+      <button onclick="confirmAction()" id="confirmBtn">Yes</button>
+      <button onclick="closePopup()" id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Rename Popup -->
+  <div id="renamePopup" class="popup">
+    <div class="popup-content">
+      <p id="renameTitle">Rename Task</p>
+      <input type="text" id="renameInput" placeholder="Enter new task name" />
+      <button onclick="confirmRename()" id="renameConfirmBtn">Rename</button>
+      <button onclick="closeRenamePopup()" id="renameCancelBtn">Cancel</button>
+    </div>
+  </div>
+
+   <script src="main.js"></script>
+
+
+    
+
+</body>
+
+</html>
