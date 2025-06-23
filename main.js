@@ -127,3 +127,7 @@ function filterTasks(filter) {
       renderTasks();
       updateActiveTab();
     }
+    function updateActiveTab() {
+      document.querySelectorAll('.tabs button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(`${currentFilter}Tab`).classList.add('active');
+    }
