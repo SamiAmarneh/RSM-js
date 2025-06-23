@@ -16,3 +16,15 @@
       --shadow: rgba(0, 0, 0, 0.1);
     }
     
+    [data-theme="dark"] {
+      --bg-color: #1a1a1a;
+      --container-bg: #2d2d2d;
+      --text-color: #ffffff;
+      --text-muted: #cccccc;
+      --border-color: #444;
+      --task-bg: #3a3a3a;
+      --task-hover: #454545;
+      --task-done-bg: #2d3a2d;
+      --popup-overlay: rgba(0,0,0,0.7);
+      --shadow: rgba(0, 0, 0, 0.3);
+    }
