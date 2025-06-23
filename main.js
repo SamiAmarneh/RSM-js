@@ -76,5 +76,8 @@ const translations = {
       }
     };
     
-
+ let tasks = [];
+let currentFilter = 'all';
+let actionCallback = null;
+let renameIndex = null;
 
