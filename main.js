@@ -60,3 +60,6 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
                     document.documentElement.setAttribute('dir', isArabic ? 'rtl' : 'ltr');
                     document.documentElement.setAttribute('lang', currentLanguage);
                     document.getElementById('langBtn').textContent = isArabic ? 'English' : 'العربية';
+                    const t = translations[currentLanguage];
+    document.getElementById('mainTitle').innerHTML = `${t.title} <span class="sub-title">${t.subtitle}</span>`;
+    document.getElementById('taskInput').placeholder = t.inputPlaceholder;
