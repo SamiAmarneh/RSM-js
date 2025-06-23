@@ -71,3 +71,7 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
     document.getElementById('deleteAllBtn').textContent = t.deleteAllBtn;
     document.getElementById('renameTitle').textContent = t.renameTitle;
     document.getElementById('renameInput').placeholder =
+    t.renamePlaceholder;
+    document.getElementById('renameConfirmBtn').textContent = t.renameBtn;
+    document.getElementById('renameCancelBtn').textContent = t.cancelBtn;
+    document.getElementById('cancelBtn').textContent = t.cancelBtn;
