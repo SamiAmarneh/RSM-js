@@ -38,3 +38,28 @@ filteredTasks.forEach((task, index) => {
       list.appendChild(li);
       });
     } 
+function updateTaskCounter(count) {
+  const counter = document.getElementById('taskCounter');
+  const totalTasks = tasks.length;
+  const doneTasks = tasks.filter(t => t.done).length;   
+  if (currentFilter === 'all') {
+    counter.textContent = getText('totalTasks', { total: totalTasks, done: doneTasks });
+    } else if (currentFilter === 'done') {
+    counter.textContent = getText('completedTasks', { count });
+    } else {
+    counter.textContent = getText('pendingTasks', { count });
+    }
+    }
+function addTask() {
+  const input = document.getElementById('taskInput');
+  const text = input.value.trim();
+  if (!validateInput(text)) return;
+    tasks.push({ text, done: false });
+    input.value = '';
+    saveToStorage();
+    renderTasks();
+    input.style.background = currentTheme === 'dark' ? '#2d5a2d' : '#d4edda';
+    setTimeout(() => {
+    input.style.background = '';
+    }, 500);
+    }
