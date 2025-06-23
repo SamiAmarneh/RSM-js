@@ -23,3 +23,11 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
             initializeApp();
             }
           );
+          function initializeApp() {
+            renderTasks();
+            updateActiveTab();
+            updateLanguage();
+            updateTheme();
+            document.getElementById('taskInput').addEventListener('keypress', (e) => {
+              if (e.key === 'Enter') addTask();
+              });
