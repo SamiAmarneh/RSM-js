@@ -42,4 +42,39 @@ const translations = {
         pendingTasks: '{count} pending tasks',
         saved: '✓ Saved'
       },
-    }
+    ar: {
+        title: 'قائمة المهام',
+        subtitle: '– إدخال المهام',
+        inputPlaceholder: 'أدخل مهمتك...',
+        addButton: 'إضافة مهمة جديدة',
+        allTab: 'الكل',
+        doneTab: 'مكتملة',
+        todoTab: 'معلقة',
+        deleteDoneBtn: 'حذف المهام المكتملة',
+        deleteAllBtn: 'حذف كل المهام',
+        renameTitle: 'إعادة تسمية المهمة',
+        renamePlaceholder: 'أدخل اسم المهمة الجديد',
+        renameBtn: 'إعادة تسمية',
+        cancelBtn: 'إلغاء',
+        confirmBtn: 'نعم',
+        emptyAll: '📝 لا توجد مهام بعد. أضف مهمتك الأولى أعلاه!',
+        emptyDone: '✅ لا توجد مهام مكتملة بعد.',
+        emptyTodo: '📋 لا توجد مهام معلقة!',
+        taskEmpty: 'لا يمكن أن تكون المهمة فارغة.',
+        taskNumber: 'يجب ألا تبدأ المهمة برقم.',
+        taskShort: 'يجب أن تحتوي المهمة على 5 أحرف على الأقل.',
+        taskExists: 'هذه المهمة موجودة بالفعل.',
+        noDoneTasks: 'لا توجد مهام مكتملة للحذف.',
+        noTasks: 'لا توجد مهام للحذف.',
+        deleteTask: 'هل أنت متأكد من حذف هذه المهمة؟',
+        deleteAllConfirm: 'حذف كل الـ {count} مهمة؟',
+        deleteDoneConfirm: 'حذف كل الـ {count} مهمة مكتملة؟',
+        totalTasks: '{total} مهمة إجمالية ({done} مكتملة)',
+        completedTasks: '{count} مهمة مكتملة',
+        pendingTasks: '{count} مهمة معلقة',
+        saved: '✓ تم الحفظ'
+      }
+    };
+    
+
+
