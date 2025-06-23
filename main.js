@@ -63,3 +63,8 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
                     const t = translations[currentLanguage];
     document.getElementById('mainTitle').innerHTML = `${t.title} <span class="sub-title">${t.subtitle}</span>`;
     document.getElementById('taskInput').placeholder = t.inputPlaceholder;
+    document.getElementById('addBtn').textContent = t.addButton;
+    document.getElementById('allTab').textContent = t.allTab;
+    document.getElementById('doneTab').textContent = t.doneTab;
+    document.getElementById('todoTab').textContent = t.todoTab;
+    document.getElementById('deleteDoneBtn').textContent = t.deleteDoneBtn;
