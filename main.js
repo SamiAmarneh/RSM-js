@@ -31,3 +31,6 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
             document.getElementById('taskInput').addEventListener('keypress', (e) => {
               if (e.key === 'Enter') addTask();
               });
+              document.getElementById('renameInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') confirmRename();
+                });
