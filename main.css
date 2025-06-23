@@ -15,7 +15,7 @@
       --popup-overlay: rgba(0,0,0,0.5);
       --shadow: rgba(0, 0, 0, 0.1);
     }
-    
+
     [data-theme="dark"] {
       --bg-color: #1a1a1a;
       --container-bg: #2d2d2d;
@@ -28,7 +28,8 @@
       --popup-overlay: rgba(0,0,0,0.7);
       --shadow: rgba(0, 0, 0, 0.3);
     }
- * {
+
+    * {
       box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -133,7 +134,7 @@
       box-shadow: 0 4px 12px rgba(0, 153, 255, 0.3);
     }
 
-     .tabs {
+    .tabs {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
@@ -189,7 +190,8 @@
       from { opacity: 0; transform: translateX(-20px); }
       to { opacity: 1; transform: translateX(0); }
     }
-.task-item:hover {
+
+    .task-item:hover {
       background: var(--task-hover);
       transform: translateX(4px);
       box-shadow: 0 4px 12px var(--shadow);
@@ -275,7 +277,9 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
     }
- .popup {
+
+    /* Popups */
+    .popup {
       display: none;
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -363,7 +367,9 @@
       font-size: 14px;
       font-weight: 500;
     }
-  [dir="rtl"] {
+
+    /* RTL Support */
+    [dir="rtl"] {
       text-align: right;
     }
 
@@ -409,7 +415,9 @@
         flex-direction: column;
       }
     }
- .storage-indicator {
+
+    /* Storage indicator */
+    .storage-indicator {
       position: fixed;
       top: 10px;
       right: 10px;
