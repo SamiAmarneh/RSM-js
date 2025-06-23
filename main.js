@@ -18,3 +18,8 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
             indicator.classList.remove('show');
             }, 2000);
           }
+          document.addEventListener('DOMContentLoaded', () => {
+            loadFromStorage();
+            initializeApp();
+            }
+          );
