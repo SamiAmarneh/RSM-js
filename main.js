@@ -46,3 +46,7 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
                     updateTheme();
                     saveToStorage();
                   }
+                  function updateTheme() {
+                    document.documentElement.setAttribute('data-theme', currentTheme);
+                    document.getElementById('themeBtn').textContent = currentTheme === 'light' ? '🌙' : '☀️';
+                  }
