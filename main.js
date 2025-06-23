@@ -121,3 +121,9 @@ function deleteTask(index) {
         renderTasks();
       }, getText('deleteAllConfirm', { count: tasks.length }));
     }
+function filterTasks(filter) {
+      currentFilter = filter;
+      saveToStorage();
+      renderTasks();
+      updateActiveTab();
+    }
