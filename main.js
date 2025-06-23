@@ -68,3 +68,6 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
     document.getElementById('doneTab').textContent = t.doneTab;
     document.getElementById('todoTab').textContent = t.todoTab;
     document.getElementById('deleteDoneBtn').textContent = t.deleteDoneBtn;
+    document.getElementById('deleteAllBtn').textContent = t.deleteAllBtn;
+    document.getElementById('renameTitle').textContent = t.renameTitle;
+    document.getElementById('renameInput').placeholder =
