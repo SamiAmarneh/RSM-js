@@ -93,3 +93,14 @@ let renameIndex = null;
       }
     }
 
+    function loadFromStorage() {
+      try {
+        const savedTasks = localStorage.getItem(STORAGE_KEYS.TASKS);
+        if (savedTasks) {
+          tasks = JSON.parse(savedTasks);
+        }
+        const savedLanguage = localStorage.getItem(STORAGE_KEYS.LANGUAGE);
+        if (savedLanguage) {
+          currentLanguage = savedLanguage;
+        }
+
