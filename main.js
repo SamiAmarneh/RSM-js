@@ -10,3 +10,11 @@ const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME);
         console.error('Error loading from localStorage:', error);
       }
     }
+    function showStorageIndicator() {
+        const indicator = document.getElementById('storageIndicator');
+        indicator.textContent = getText('saved');
+        indicator.classList.add('show');
+        setTimeout(() => {
+            indicator.classList.remove('show');
+            }, 2000);
+          }
