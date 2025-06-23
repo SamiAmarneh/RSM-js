@@ -83,3 +83,5 @@ function getText(key, params = {}) {
     Object.keys(params).forEach(param => {
     text = text.replace(`{${param}}`, params[param]);
   });
+  return text;
+}
